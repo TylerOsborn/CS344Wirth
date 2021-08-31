@@ -7,16 +7,60 @@
 {% endblock %}
 
 {% block content %}
+<div class="row">
+  <div class="col-md-4">
+    <div class="row mt-5 ml-5">
+      <div class="col-md-4 mb-4 border">
+        <section id="sidebar">
+          <section id="filters">
+            <h5 class="pt-2 mb-4">Filters</h5>
+            <section class="mb-4">
+              <div class="md-form md-outline mt-0 d-flex justify-content-between align-items-center">
+                <input type="text" id="search12" class="form-control mb-0" placeholder="Search...">
+                <a href="#!" class="btn btn-flat btn-md px-3 waves-effect"><i class="fas fa-search fa-lg"></i></a>
+              </div>
+            </section>
+            
+            <!-- Section: Filter By Type -->
+            <section class="mb-4 ml-4">
+              <h6 class="font-weight-bold mb-3">Filter by type</h6>
+              {% for i in range(10) %}
+              <div class="form-check pl-0 mb-3">
+                <input type="checkbox" class="form-check-input filled-in" id="Type {{i}}">
+                <label class="form-check-label small text-uppercase card-link-secondary" for="Type {{i}}">Type {{i}}</label>
+              </div>
+              {% endfor %}
+            </section>
+          </section>
+        </section>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-md-8 border">
     {% for i in range(4) %}
-    <div class="row">
-      {% for j in range(4) %} 
-      <div class="column">
-          <div class="cell">
-            <img src="{{url_for('static', filename='mario-mystery-block.png') }}">
-            <p>{{j}}</p>
+    <section>
+      <div class="row">
+        {% for i in range(4)%}
+        <div class="col-md-auto mb-4">
+          <div class="">
+            <div class="view zoom overlay z-depth-2 rounded">
+              <img class="img-card"
+              src="{{url_for('static',filename='mario-mystery-block.png')}}" alt="mario mystery block">
+            </div>
+            
+            <div class="text-center pt-4">
+              <h5>Mario mystery block</h5>
+              <p class="mb-2 text-muted text-uppercase small">Games</p>
+              <hr>
+              <h6 class="mb-3">Price</h6>
+            </div>
           </div>
+        </div>
+        {% endfor %}
       </div>
       {% endfor %}
-    </div>
-    {% endfor %}
+    </section>
+  </div>
+</div>
 {% endblock %}
