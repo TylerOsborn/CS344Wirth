@@ -1,31 +1,3 @@
-/* Grid Layout */
-
-.column {
-    float: left;
-    width: 20%;
-    padding: 15px;
-    align-items: center;
-}
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-img {
-    border-radius: 8px;
-    padding: 5px;
-    max-width: 100%;
-    display: block;
-    vertical-align: text-bottom;
-}
-
-#content {
-    float: right;
-    max-width: 70%;
-}
-
-p {
-    text-align: center;
+.img-card {
+    max-width: 256px;
 }
