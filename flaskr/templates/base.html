@@ -12,8 +12,8 @@
             <img class="mt-5 w-100 img-center blur" src="{{url_for('static',filename='Signature-of-Wirth.png')}}" alt="">
         </div>
 
-        <div id="navbar">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container-fluid" id="navbar">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
                 <a class="navbar-brand" href="{{url_for('home_page')}}">CS344 Wirth Recommender</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
                 </div>
               </nav>
         </div>
-        <div id="content">
+        <div class="container-fluid padding-top w-100" id="content">
             {% block content %}
             {% endblock %}
         </div>
