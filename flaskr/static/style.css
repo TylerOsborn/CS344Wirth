@@ -10,6 +10,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: fixed;
+    padding: 20px;;
 }
   
 .bg-text {
@@ -30,4 +31,23 @@
 
 .bg-plain {
     background-color: white;
+}
+
+.padding-top {
+    padding-top: 55px;
+}
+
+.abs-right {
+    position: absolute;
+    right: 0px;
+}
+
+.fixed-left{
+    position: fixed;
+    left: 0px;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0px;
 }
