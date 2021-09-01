@@ -6,5 +6,9 @@ app = Flask(__name__)
 def home_page():
     return render_template("store/home_page.html")
 
+@app.route("/product_search")
+def products_page():
+    return render_template("store/products_page.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
