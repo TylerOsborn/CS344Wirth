@@ -1,0 +1,794 @@
+{    "hits": {
+        "total": {
+            "value": 614,
+            "relation": "eq"
+        },
+        "max_score": 13.525669,
+        "hits": [
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD5401CHXL",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD5401CHXL",
+                    "name": "DeMarini Paradox Fitted Pro Batting Helmet in Charcoal - Size: XL",
+                    "description": "The all new Paradox Pro Batting Helmet features a fitted design for better fit and optimal performance. The rubberized matte finish gives it a more modern look that will make your team stand out on the field.",
+                    "category": "Sporting Goods",
+                    "filterCategory": "sporting goods",
+                    "labels": [
+                        "WTD54_2887447",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/8/5/85461ec7ae31441126c43be79fff472f3a09bba8_wtd5401chxl_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/batting-helmets/paradox-fitted-pro-batting-helmet",
+                    "manufacturer": "DeMarini",
+                    "gender": "Unisex",
+                    "currentPrice": 35.99,
+                    "originalPrice": 35.99,
+                    "dollarPrice": 35.99,
+                    "currency": "USD",
+                    "gtin": "00887768361808",
+                    "color": [
+                        "Charcoal"
+                    ],
+                    "size": "XL",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 35.99,
+                        "originalPrice": 35.99,
+                        "dollarPrice": 35.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Sporting Goods",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Sale > Outlet > Gear"
+                        ],
+                        "category": "Sporting Goods",
+                        "filterCategory": "sporting goods"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Charcoal"
+                        ],
+                        "size": "XL",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Unisex",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768361808",
+                        "mpn": "WTD5401CHXL",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD54_2887447"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD5401SCXL",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD5401SCXL",
+                    "name": "DeMarini Paradox Fitted Pro Batting Helmet in Scarlet - Size: XL",
+                    "description": "The all new Paradox Pro Batting Helmet features a fitted design for better fit and optimal performance. The rubberized matte finish gives it a more modern look that will make your team stand out on the field.",
+                    "category": "Sporting Goods",
+                    "filterCategory": "sporting goods",
+                    "labels": [
+                        "WTD54_2887447",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/d/c/dcc994de5ba4605ef8e5877e6c02dae70cf969dd_wtd5401scxl_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/batting-helmets/paradox-fitted-pro-batting-helmet",
+                    "manufacturer": "DeMarini",
+                    "gender": "Unisex",
+                    "currentPrice": 35.99,
+                    "originalPrice": 35.99,
+                    "dollarPrice": 35.99,
+                    "currency": "USD",
+                    "gtin": "00887768361686",
+                    "color": [
+                        "Scarlet"
+                    ],
+                    "size": "XL",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 35.99,
+                        "originalPrice": 35.99,
+                        "dollarPrice": 35.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Sporting Goods",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Sale > Outlet > Gear"
+                        ],
+                        "category": "Sporting Goods",
+                        "filterCategory": "sporting goods"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Scarlet"
+                        ],
+                        "size": "XL",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Unisex",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768361686",
+                        "mpn": "WTD5401SCXL",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD54_2887447"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500DGL",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500DGL",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Dark Green - Size: L",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/b/e/beab20c9c9dbc52bc678d4b5fb830edf87903574_wtd4500dgl_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367169",
+                    "color": [
+                        "Dark Green"
+                    ],
+                    "size": "L",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Dark Green"
+                        ],
+                        "size": "L",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367169",
+                        "mpn": "WTD4500DGL",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500DGXS",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500DGXS",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Dark Green - Size: XS",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/7/e/7eff347d9b3e60b888b3dce3961f9b5ac5595bd2_wtd4500dgxs_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367138",
+                    "color": [
+                        "Dark Green"
+                    ],
+                    "size": "XS",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Dark Green"
+                        ],
+                        "size": "XS",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367138",
+                        "mpn": "WTD4500DGXS",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500GGL",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500GGL",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Goatbelly Gray - Size: L",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/7/e/7e26d0322ef4e33219d301bf8da9cb729bdfcbde_wtd4500ggl_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367220",
+                    "color": [
+                        "Goatbelly Gray"
+                    ],
+                    "size": "L",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Goatbelly Gray"
+                        ],
+                        "size": "L",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367220",
+                        "mpn": "WTD4500GGL",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500MAL",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500MAL",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Maroon - Size: L",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/3/3/33fb3526cb049b518d7eaafa91e9e862812ce2dd_wtd4500mal_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367282",
+                    "color": [
+                        "Maroon"
+                    ],
+                    "size": "L",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Maroon"
+                        ],
+                        "size": "L",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367282",
+                        "mpn": "WTD4500MAL",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500MAS",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500MAS",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Maroon - Size: S",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/3/e/3ec8aa8d1cdc6cd2017df579c657d490a783031c_wtd4500mas_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367268",
+                    "color": [
+                        "Maroon"
+                    ],
+                    "size": "S",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Maroon"
+                        ],
+                        "size": "S",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367268",
+                        "mpn": "WTD4500MAS",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500NAS",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500NAS",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Navy - Size: S",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/d/8/d880447aea3e1c0726893cd9194bbba0f2a90c2c_wtd4500nas_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367329",
+                    "color": [
+                        "Navy"
+                    ],
+                    "size": "S",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Navy"
+                        ],
+                        "size": "S",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367329",
+                        "mpn": "WTD4500NAS",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500PRXS",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500PRXS",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Purple - Size: XS",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/c/5/c5edbda1ab51a1871d2a06db0804922237ec8793_wtd4500prxs_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367374",
+                    "color": [
+                        "Purple"
+                    ],
+                    "size": "XS",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Purple"
+                        ],
+                        "size": "XS",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367374",
+                        "mpn": "WTD4500PRXS",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            },
+            {
+                "_index": "productdata_1_9",
+                "_type": "_doc",
+                "_id": "4111_WTD4500ROL",
+                "_score": 13.525669,
+                "_source": {
+                    "lastUpdated": "Aug 28, 2021 6:30:49 AM",
+                    "marketplaceProduct": true,
+                    "version": 0,
+                    "catalogId": 4111,
+                    "campaignId": 9003,
+                    "catalogItemId": "WTD4500ROL",
+                    "name": "DeMarini Women's T600 2-Button Jersey in Royal Blue - Size: L",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "category": "Apparel & Accessories > Clothing > Activewear",
+                    "filterCategory": "apparel & accessories > clothing > activewear",
+                    "labels": [
+                        "WTD45_2941389",
+                        "Baseball"
+                    ],
+                    "imageUrl": "http://shop.demarini.com/media/catalog/product/c/c/cc21cc768c448338cb23326168a908d4a525fd3e_wtd4500rol_1.jpg",
+                    "stockAvailability": "InStock",
+                    "productUrl": "https://www.demarini.com/en-us/apparel/jerseys/women-s-t600-2-button-jersey",
+                    "manufacturer": "DeMarini",
+                    "gender": "Female",
+                    "currentPrice": 46.99,
+                    "dollarPrice": 46.99,
+                    "currency": "USD",
+                    "gtin": "00887768367466",
+                    "color": [
+                        "Royal Blue"
+                    ],
+                    "size": "L",
+                    "pricing": {
+                        "currency": "USD",
+                        "currentPrice": 46.99,
+                        "dollarPrice": 46.99
+                    },
+                    "inventory": {},
+                    "availability": {
+                        "stockAvailability": "InStock"
+                    },
+                    "shipping": {
+                        "prices": []
+                    },
+                    "taxonomy": {
+                        "originalFormatCategory": "Apparel & Accessories > Clothing > Activewear",
+                        "advertiserFormatCategory": [
+                            "DeMarini > Apparel > Jerseys"
+                        ],
+                        "category": "Apparel & Accessories > Clothing > Activewear",
+                        "filterCategory": "apparel & accessories > clothing > activewear"
+                    },
+                    "physicalAttributes": {
+                        "color": [
+                            "Royal Blue"
+                        ],
+                        "size": "L",
+                        "bundle": false,
+                        "condition": "New"
+                    },
+                    "targetDemographics": {
+                        "gender": "Female",
+                        "ageGroup": "Adult",
+                        "adult": false
+                    },
+                    "identification": {
+                        "gtin": "00887768367466",
+                        "mpn": "WTD4500ROL",
+                        "identifierExists": true
+                    },
+                    "custom": {},
+                    "variant": {
+                        "isParent": false,
+                        "itemGroupId": "WTD45_2941389"
+                    }
+                }
+            }
+        ]
+    }
+}
