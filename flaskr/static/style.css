@@ -51,3 +51,14 @@
     position: fixed;
     top: 0px;
 }
+
+.white-box {
+    background-color: red;
+    color: black;
+    width: 256px;
+    height: 256px;
+}
+
+.text-img {
+    height: 1em;
+}
