@@ -34,22 +34,45 @@
     {% for i in range(4) %}
     <section>
       <div class="row">
-        {% for i in range(5)%}
+        {% for j in range(5)%}
+        {% if i*5 + j < data.index.stop %}
         <div class="col-md-auto mb-4">
           <div class="">
             <div class="view zoom overlay z-depth-2 rounded">
               <img class="img-card"
-              src="{{url_for('static', filename='mario-mystery-block.png')}}" alt="mario mystery block">
+              src="{{data.loc[i*5+j]['imageUrl']}}" alt="{{data.loc[i*5+j]['imageUrl']}}">
             </div>
             
             <div class="text-center pt-4">
-              <h5>Mario mystery block</h5>
-              <p class="mb-2 text-muted text-uppercase small">Games</p>
+              {% if data.loc[i*5 + j]['name']|length > 30 %} 
+              <h5>{{data.loc[i*5 + j]['name'][0:27]}}...</h5>
+              {% else %}
+              <h5>{{data.loc[i*5 + j]['name']}}</h5>
+              {% endif %}
+              <p class="mb-2 text-muted text-uppercase small">{{data.loc[i*5+j]['manufacturer']}}</p>
+              <p class="mb-1 text-muted text-uppercase small">{{data.loc[i*5+j]['gender']}}</p>
               <hr>
-              <h6 class="mb-3">Price</h6>
+              <h6 class="mb-3">$ {{data.loc[i*5 + j]['dollarPrice']}}</h6>
             </div>
           </div>
         </div>
+        {% else %}
+          <div class="col-md-auto mb-4">
+            <div class="">
+              <div class="view zoom overlay z-depth-2 rounded">
+                <img class="img-card"
+                src="{{url_for('static', filename='mario-mystery-block.png')}}" alt="mario mystery block">
+              </div>
+              
+              <div class="text-center pt-4">
+                <h5>Mario mystery block</h5>
+                <p class="mb-2 text-muted text-uppercase small">Nintendo</p>
+                <hr>
+                <h6 class="mb-3">1 <img class = "text-img" src="{{url_for('static', filename='mario-coin.png')}}" alt="gold coin"></h6>
+              </div>
+            </div>
+          </div>
+        {% endif %}
         {% endfor %}
       </div>
       {% endfor %}
