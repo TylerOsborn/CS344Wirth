@@ -14,7 +14,7 @@
 
         <div class="container-fluid" id="navbar">
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top border-bottom">
-                <a class="navbar-brand" href="{{url_for('home_page')}}">CS344 Wirth Recommender</a>
+                <a class="navbar-brand" href="{{url_for('item_page')}}">CS344 Wirth Recommender</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,7 +35,7 @@
                 </div>
               </nav>
         </div>
-        <div class="container-fluid padding-top w-100" id="content">
+        <div class="container-fluid padding-top w-100 h-100" id="content">
             {% block content %}
             {% endblock %}
         </div>
