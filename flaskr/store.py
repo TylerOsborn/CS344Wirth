@@ -1,6 +1,6 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 import pandas as pd
-import recommendation as recommendation
+import test_recommender as recommendation
 
 app = Flask(__name__)
 
@@ -11,11 +11,17 @@ def home_page():
 
 @app.route("/product_search")
 def products_page():
-    return render_template("store/products_page.html", data=recommendation.products)
+    return render_template("store/products_page.html", data=None, data_len=0)
 
 @app.route("/item")
 def item_page():
     return render_template("store/item_page.html")
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.args['query']
+    print(query)
+    data = recommendation.search_products(query)
+    return render_template("store/products_page.html", data=data, data_len=len(data))
 if __name__ == "__main__":
     app.run(debug=True)
