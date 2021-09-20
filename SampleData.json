@@ -1,10 +1,4 @@
-{    "hits": {
-        "total": {
-            "value": 614,
-            "relation": "eq"
-        },
-        "max_score": 13.525669,
-        "hits": [
+{ "data": [
             {
                 "_index": "productdata_1_9",
                 "_type": "_doc",
@@ -646,7 +640,7 @@
                     "campaignId": 9003,
                     "catalogItemId": "WTD4500PRXS",
                     "name": "DeMarini Women's T600 2-Button Jersey in Purple - Size: XS",
-                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game.Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
+                    "description": "The T600 has a 2-button placket pullover with a distinct athletic fit for females. Its breathable white inserts and lightweight moisture-wicking antimicrobial fabric prevents any possible movement restrictions and allows the player to focus on the game. Model Information: Annie is 5'8\" Tall, Wearing Size Women's Small",
                     "category": "Apparel & Accessories > Clothing > Activewear",
                     "filterCategory": "apparel & accessories > clothing > activewear",
                     "labels": [
@@ -790,5 +784,4 @@
                 }
             }
         ]
-    }
 }
