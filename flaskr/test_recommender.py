@@ -30,7 +30,6 @@ item_data['soup'] = item_data['description'].str.lower() + ', ' + item_data['nam
 def get_recommender(data):
     #object to remove all non-necessary words from the description
     tfidf = TfidfVectorizer(stop_words='english')
-
     #matrix of keywords found in description (tfidf now has a list of all descriptor words)
     tfidf_matrix = tfidf.fit_transform(item_data['soup'])
 
@@ -41,7 +40,13 @@ def search_products(query, data=item_data):
     results = data[data['soup'].str.find(query.lower()) > 0]
     return results
 
-def get_recommendations(index_id, data=item_data, return_num=3, index_name='catalogItemId'):
+def get_item(query, data=item_data, column="catalogItemId"):
+    product = data[data[column] == query]
+    if not product.empty:
+        return product
+    return None
+
+def get_recommendations(index_id, data=item_data, return_num=6, index_name='catalogItemId'):
 
     cosine_sim = get_recommender(data)
     indices = pd.Series(data.index, index=data[index_name]).drop_duplicates()
@@ -57,3 +62,4 @@ def get_recommendations(index_id, data=item_data, return_num=3, index_name='cata
 
 # print(get_recommendations('022150254', item_data, return_num=10, index_name='catalogItemId'))
 # search_products("gps")
+get_item("022150254")
