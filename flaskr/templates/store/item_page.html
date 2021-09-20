@@ -7,5 +7,42 @@
 {% endblock %}
 
 {% block content %}
-
+<div class="container bg-light w-100">
+    <div class="row align-items-center">
+        <div class="col md-6">
+            <div class="card box-shadow">
+                <img src="{{product['imageUrl'].iloc[0]}}"
+                     style="width: 100%; max-height: 100%;">
+                <div class="card-body">
+                    <div class="card-text, align-items-center">
+                        <p>
+                            {{product['name'].iloc[0]}}
+                        </p>
+                        <ul>
+                            {% for i in product['bullets'].iloc[0] %}
+                                <li>{{i}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container bg-light py-5">
+    <div class="row bg-light">
+        {% for i in range(recommendations | length) %}
+        <div class="col-md-4">
+            <div class="card box-shadow">
+                <img class="card-img-top" src="{{recommendations['imageUrl'].iloc[i]}}" style="max-height: 100%; max-width: 100%;">
+                <div class="card-body">
+                    <div class="card-text">
+                        <p>{{recommendations['name'].iloc[i]}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
