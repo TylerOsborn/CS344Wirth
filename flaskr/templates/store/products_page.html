@@ -7,14 +7,12 @@
 {% endblock %}
 
 {% block content %}
-<!-- <div class="row"> -->
   <div class="fixed-left h-100 bg-light border" style="width: 30%;">
     <div class="row mt-1 ml-1">
       <div class="col-md-4 mb-4">
         <section id="sidebar">
           <section id="filters">
             <h5 class="pt-2 mb-4">Filters</h5>
-            
             <!-- Section: Filter By Type -->
             <section class="mb-4 ml-4">
                 <h6 class="font-weight-bold mb-3">Filter by type</h6>
@@ -30,6 +28,7 @@
       </div>
     </div>
   </div>
+  <!-- Products -->
   <div class="border abs-right bg-light" style="width: 80%">
     {% for i in range(4) %}
     <section>
@@ -38,9 +37,12 @@
         {% if i*5 + j < data_len %}
         <div class="col-md-auto mb-4">
           <div class="">
-            <div class="view zoom overlay z-depth-2 rounded">
-              <img class="img-card"
-              src="{{data.iloc[i*5+j]['imageUrl']}}" alt="{{data.iloc[i*5+j]['imageUrl']}}">
+            <div class="card box-shadow">
+              <a href="{{url_for('item_page', product_id=data.iloc[i*5+j]['catalogItemId'])}}">
+                <img class="img-card"
+                src="{{data.iloc[i*5+j]['imageUrl']}}" alt="{{data.iloc[i*5+j]['imageUrl']}}"
+                style="height: 225px; width:100%;">
+              </a>
             </div>
             
             <div class="text-center pt-4">
@@ -58,7 +60,7 @@
         {% else %}
           <div class="col-md-auto mb-4">
             <div class="">
-              <div class="view zoom overlay z-depth-2 rounded">
+              <div class="">
                 <img class="img-card"
                 src="{{url_for('static', filename='mario-mystery-block.png')}}" alt="mario mystery block">
               </div>
@@ -77,5 +79,4 @@
       {% endfor %}
     </section>
   </div>
-<!-- </div> -->
 {% endblock %}
