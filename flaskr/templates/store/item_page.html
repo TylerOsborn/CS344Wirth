@@ -34,12 +34,14 @@
         {% for i in range(recommendations | length) %}
         <div class="col-md-4">
             <div class="card box-shadow">
-                <img class="card-img-top" src="{{recommendations['imageUrl'].iloc[i]}}" style="max-height: 100%; max-width: 100%;">
-                <div class="card-body">
-                    <div class="card-text">
-                        <p>{{recommendations['name'].iloc[i]}}</p>
+                <a href="{{url_for('item_page', product_id=recommendations.iloc[i]['catalogItemId'])}}">
+                    <img class="card-img-top" src="{{recommendations['imageUrl'].iloc[i]}}" style="max-height: 100%; max-width: 100%;">
+                    <div class="card-body">
+                        <div class="card-text">
+                            <p>{{recommendations['name'].iloc[i]}}</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
         {% endfor %}
