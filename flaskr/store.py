@@ -1,9 +1,10 @@
 from flask import Flask, render_template, redirect, url_for, request
 import pandas as pd
 import test_recommender as recommender
+from siamese import siamese
+import os
 
 app = Flask(__name__)
-
 
 @app.route("/")
 def home_page():
@@ -17,9 +18,9 @@ def products_page():
 def item_page():
     if request.method == "GET":
         product_id = request.args["product_id"]
-        recommendations = recommender.get_recommendations(product_id)
+        recommendations, scores = recommender.get_recommendations(product_id)
         product = recommender.get_item(product_id)
-        return  render_template("store/item_page.html", product=product, recommendations=recommendations) 
+        return  render_template("store/item_page.html", product=product, recommendations=recommendations, scores=scores) 
     return render_template("store/item_page.html", product=None, recommendations=None)
 
 @app.route("/search", methods=["GET", "POST"])
@@ -31,7 +32,7 @@ def search():
 @app.route("/product", methods=["GET", "POST"])
 def get_item_page():
     query = request.args["query"]
-    recommendations = recommender.get_recommendations(query)
+    recommendations = recommender.get_recommendations(query, recommender.cosine_sim)
     return "<h1> hello </h1>"
 
 if __name__ == "__main__":

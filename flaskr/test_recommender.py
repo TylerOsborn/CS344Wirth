@@ -8,7 +8,7 @@ from sklearn.metrics.pairwise import linear_kernel
 
 pd.set_option('display.max_colwidth', None)
 
-data = pd.read_json('combined.json')
+data = pd.read_json('../combined.json')
 item_data = pd.DataFrame([i['_source'] for i in data['data']])
 
 def homogenize(data):
@@ -36,6 +36,8 @@ def get_recommender(data):
     #cosine similarity matrix of all items
     return linear_kernel(tfidf_matrix, tfidf_matrix)
 
+cosine_sim = get_recommender(item_data)
+
 def search_products(query, data=item_data):
     results = data[data['soup'].str.find(query.lower()) > 0]
     return results
@@ -57,9 +59,10 @@ def get_recommendations(index_id, data=item_data, return_num=6, index_name='cata
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     sim_scores = sim_scores[1: return_num + 1]
     item_indices = [i[0] for i in sim_scores]
+    scores = [i[1] for i in sim_scores]
 
-    return pd.DataFrame(item_data.iloc[item_indices])
+    return pd.DataFrame(item_data.iloc[item_indices]), scores
 
 # print(get_recommendations('022150254', item_data, return_num=10, index_name='catalogItemId'))
 # search_products("gps")
-get_item("022150254")
+# get_item("022150254")
