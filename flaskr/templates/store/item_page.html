@@ -15,14 +15,18 @@
                      style="width: 100%; max-height: 100%;">
                 <div class="card-body">
                     <div class="card-text, align-items-center">
-                        <p>
+                        <p><strong>
                             {{product['name'].iloc[0]}}
-                        </p>
+                        </strong></p>
+                        <p>Cluster: {{clusters[0]}}</p>
                         <ul>
                             {% for i in product['bullets'].iloc[0] %}
                                 <li>{{i}}</li>
                             {% endfor %}
                         </ul>
+                        <p>
+                            {{ product['description'].iloc[0] }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -36,14 +40,17 @@
             <div class="card box-shadow">
                 <a href="{{url_for('item_page', product_id=recommendations.iloc[i]['catalogItemId'])}}">
                     <img class="card-img-top" src="{{recommendations['imageUrl'].iloc[i]}}" style="max-height: 100%; max-width: 100%;">
-                    <div class="card-body">
-                        <div class="card-text">
-                            <p>{{recommendations['name'].iloc[i]}}</p>
-                            <p>Sim Score: {{scores[i]}}</p>
-                            <p>Siamese Scores: 0</p>
-                        </div>
-                    </div>
                 </a>
+                <div class="card-body">
+                    <div class="card-text">
+                         <a href="{{url_for('item_page', product_id=recommendations.iloc[i]['catalogItemId'])}}">
+                            <p>{{recommendations['name'].iloc[i]}}</p>
+                         </a>
+                        <p>Sim Score: {{"{:.2f}".format(scores[i] * 100)+"%"}}</p>
+                        <p>Cluster: {{clusters[i+1]}}</p>
+                        <p>Siamese Scores: 0</p>
+                    </div>
+                </div>
             </div>
         </div>
         {% endfor %}
