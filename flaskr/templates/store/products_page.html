@@ -7,76 +7,78 @@
 {% endblock %}
 
 {% block content %}
-  <div class="fixed-left h-100 bg-light border" style="width: 30%;">
-    <div class="row mt-1 ml-1">
-      <div class="col-md-4 mb-4">
-        <section id="sidebar">
-          <section id="filters">
-            <h5 class="pt-2 mb-4">Filters</h5>
-            <!-- Section: Filter By Type -->
-            <section class="mb-4 ml-4">
-                <h6 class="font-weight-bold mb-3">Filter by type</h6>
-                {% for i in range(10) %}
-                <div class="form-check pl-0 mb-3">
-                  <input type="checkbox" class="form-check-input filled-in" id="Type {{i}}">
-                  <label class="form-check-label small card-link-secondary" for="Type {{i}}">Type {{i}}</label>
-                </div>
-                {% endfor %}
-            </section>
-          </section>
-        </section>
-      </div>
-    </div>
-  </div>
-  <!-- Products -->
-  <div class="border abs-right bg-light" style="width: 80%">
-    {% for i in range(4) %}
-    <section>
-      <div class="row">
-        {% for j in range(5)%}
-        {% if i*5 + j < data_len %}
-        <div class="col-md-auto mb-4">
-          <div class="">
-            <div class="card box-shadow">
-              <a href="{{url_for('item_page', product_id=data.iloc[i*5+j]['catalogItemId'])}}">
-                <img class="img-card"
-                src="{{data.iloc[i*5+j]['imageUrl']}}" alt="{{data.iloc[i*5+j]['imageUrl']}}"
-                style="height: 225px; width:100%;">
-              </a>
+<div class="container-fluid w-100 h-100 bg-light">
+    <div class="fixed-left h-100" style="background-color: rgb(227, 71, 71); border: none; color: white;">
+        <div class="row mt-1 ml-1">
+            <div class="col-md-9 mb-4 p-3 ml-2">
+                <section id="sidebar">
+                    <section id="filters">
+                        <h5 class="pt-2 mb-4 mt-3">Filters</h5>
+                        <!-- Section: Filter By Type -->
+                        <section class="mb-4" style="width: 100%;">
+                            <div class="form-check pl-0 mb-3 ml-4">
+                                <input type="checkbox" class="form-check-input filled-in" id="male">
+                                <label class="form-check-label small card-link-secondary" for="male">Male</label>
+                            </div>
+                            <div class="form-check pl-0 mb-3 ml-4">
+                                <input type="checkbox" class="form-check-input filled-in" id="female">
+                                <label class="form-check-label small card-link-secondary" for="female">Female</label>
+                            </div>
+                            <div class="form-check pl-0 mb-3 ml-4">
+                                <input type="checkbox" class="form-check-input filled-in" id="unisex">
+                                <label class="form-check-label small card-link-secondary" for="unisex">Unisex</label>
+                            </div>
+                            <div class="form-check pl-0 mb-3 ml-4">
+                                <input type="checkbox" class="form-check-input filled-in" id="adult">
+                                <label class="form-check-label small card-link-secondary" for="adult">Adult</label>
+                            </div>
+                            <div class="form-check pl-0 mb-3 ml-4">
+                                <input type="checkbox" class="form-check-input filled-in" id="price">
+                                <label class="form-check-label small card-link-secondary" for="price">Price</label>
+                            </div>
+                            <input type="range" value="25" min="1" max="500" step="5"
+                                   oninput="this.nextElementSibling.value = this.value"> $
+                            <output>25</output>
+                        </section>
+                    </section>
+                </section>
             </div>
-            
-            <div class="text-center pt-4">
-              {% if data.iloc[i*5 + j]['name']|length > 30 %} 
-              <h5>{{data.iloc[i*5 + j]['name'][0:27]}}...</h5>
-              {% else %}
-              <h5>{{data.iloc[i*5 + j]['name']}}</h5>
-              {% endif %}
-              <p class="mb-2 text-muted text-uppercase small">{{data.iloc[i*5+j]['manufacturer']}}</p>
-              <hr>
-              <h6 class="mb-3">$ {{data.iloc[i*5 + j]['dollarPrice']}}</h6>
-            </div>
-          </div>
         </div>
-        {% else %}
-          <div class="col-md-auto mb-4">
-            <div class="">
-              <div class="">
-                <img class="img-card"
-                src="{{url_for('static', filename='mario-mystery-block.png')}}" alt="mario mystery block">
-              </div>
-              
-              <div class="text-center pt-4">
-                <h5>Mario mystery block</h5>
-                <p class="mb-2 text-muted text-uppercase small">Nintendo</p>
-                <hr>
-                <h6 class="mb-3">1 <img class = "text-img" src="{{url_for('static', filename='mario-coin.png')}}" alt="gold coin"></h6>
-              </div>
+    </div>
+    <!-- Products -->
+    <div class="abs-right pt-5 pl-5 bg-light" style="width: 85%;">
+        {% for i in range(4) %}
+        <section>
+            <div class="row">
+                {% for j in range(5)%}
+                {% if i*5 + j < data_len %}
+                <div class="col-md-auto mb-4">
+                    <div class="">
+                        <div class="card box-shadow">
+                            <a href="{{url_for('item_page', product_id=data.iloc[i*5+j]['catalogItemId'])}}">
+                                <img class="img-card"
+                                     src="{{data.iloc[i*5+j]['imageUrl']}}" alt="{{data.iloc[i*5+j]['imageUrl']}}"
+                                     style="height: 225px; width:100%;">
+                            </a>
+                        </div>
+
+                        <div class="text-center pt-4">
+                            {% if data.iloc[i*5 + j]['name']|length > 30 %}
+                            <h5>{{data.iloc[i*5 + j]['name'][0:27]}}...</h5>
+                            {% else %}
+                            <h5>{{data.iloc[i*5 + j]['name']}}</h5>
+                            {% endif %}
+                            <p class="mb-2 text-muted text-uppercase small">{{data.iloc[i*5+j]['manufacturer']}}</p>
+                            <hr>
+                            <h6 class="mb-3">$ {{data.iloc[i*5 + j]['dollarPrice']}}</h6>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
-          </div>
-        {% endif %}
-        {% endfor %}
-      </div>
-      {% endfor %}
-    </section>
-  </div>
+            {% endfor %}
+        </section>
+    </div>
+</div>
 {% endblock %}
