@@ -29,6 +29,31 @@
     text-align: center;
 }
 
+.impact {
+    background-color: rgb(47, 57, 72);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.btn, .btn-outline-success {
+    background-color: rgb(227, 71, 71) !important;
+    border-color: rgb(227, 71, 71) !important;
+    color: white !important;
+}
+
+.btn:hover, .btn-outline-success:hover {
+    background-color: white !important;
+    border-color: rgb(227, 71, 71) !important;
+    color: rgb(227, 71, 71) !important;
+}
+
 .bg-plain {
     background-color: white;
 }
@@ -61,4 +86,9 @@
 
 .text-img {
     height: 1em;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: white;
 }
