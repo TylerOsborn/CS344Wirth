@@ -89,7 +89,7 @@ tfidf_matrix = tfidf.fit_transform(item_data['soup'])
 def get_cluster(product_id):
     product = get_item(product_id)
     if product is not None:
-        kmeans = KMeans(n_clusters=5).fit(tfidf_matrix)
+        kmeans = KMeans(n_clusters=5, random_state=1).fit(tfidf_matrix)
         cluster = kmeans.predict(tfidf.transform([product['name'].iloc[0].lower() + "," +
                                                   product['description'].iloc[0].lower() +
                                                   product['category'].iloc[0].lower()]))
