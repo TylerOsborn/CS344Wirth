@@ -1,7 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request
 import pandas as pd
 import test_recommender as recommender
-from siamese import siamese
 import os
 
 app = Flask(__name__)
