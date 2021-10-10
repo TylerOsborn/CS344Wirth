@@ -7,13 +7,15 @@
 {% endblock %}
 
 {% block content %}
-<div id="communityGraph" class="cluster container-fluid w-100 h-100">
-    <h1>Community</h1>
+<h1 class="mt-5 ml-5" style="color: rgb(47, 57, 72);">Clustering Visualisation</h1>
+<p class="ml-5" style="color: rgb(47, 57, 72);">k = 30</p>
+
+<div id="cluster" class="cluster pt-8 container-fluid w-100 h-100">
+
 </div>
 
-<!-- D3.js Scripts -->
-	<script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="https://d3js.org/d3-scale.v3.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3-scale.v3.min.js"></script>
 
 <script>
 var color = d3.scale.category20()
@@ -22,7 +24,7 @@ var width = 2000,
   height = 1700
 
 var svg = d3
-  .select("#communityGraph")
+  .select("#cluster")
   .append("svg")
   .attr("width", width)
   .attr("height", height)
@@ -90,4 +92,5 @@ d3.json("{{url_for('cluster_data')}}", function (json) {
 })
 </script>
 {% endblock %}
+
 
