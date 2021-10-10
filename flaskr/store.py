@@ -3,6 +3,7 @@ import pandas as pd
 import test_recommender as recommender
 from siamese import siamese
 import os
+import json
 
 app = Flask(__name__)
 
@@ -10,6 +11,16 @@ app = Flask(__name__)
 @app.route("/")
 def home_page():
     return render_template("store/home_page.html")
+
+
+@app.route("/cluster_visual")
+def cluster_page():
+    return render_template("store/cluster_page.html")
+
+
+@app.route("/model_details")
+def model_page():
+    return render_template("store/model_page.html")
 
 
 @app.route("/product_search")
@@ -26,7 +37,8 @@ def item_page():
         clusters = [recommender.get_cluster(product_id)]
         for i in range(len(recommendations)):
             clusters.append(recommender.get_cluster(recommendations['catalogItemId'].iloc[i]))
-        return render_template("store/item_page.html", product=product, recommendations=recommendations, scores=scores, clusters=clusters)
+        return render_template("store/item_page.html", product=product, recommendations=recommendations, scores=scores,
+                               clusters=clusters)
     return render_template("store/item_page.html", product=None, recommendations=None, clusters=None)
 
 
@@ -42,6 +54,14 @@ def get_item_page():
     query = request.args["query"]
     recommendations = recommender.get_recommendations(query, recommender.cosine_sim)
     return "<h1> hello </h1>"
+
+
+@app.route('/visual_data', methods=['GET'])
+def cluster_data():
+    f = open('cluster_data.json', )
+    data = json.load(f)
+    f.close()
+    return json.dumps(data)
 
 
 if __name__ == "__main__":
