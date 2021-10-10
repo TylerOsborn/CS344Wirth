@@ -16,6 +16,8 @@
                 <a class="navbar-brand ml-3" href="{{url_for('home_page')}}"><strong>Impact Product Recommender</strong></a>
                 <div class="collapse navbar-collapse navbar-nav mr-auto" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+                        <a class="ml-3 mt-1" style="color: white; "href="{{url_for('cluster_page')}}">Cluster Visualisation</a>
+                        <a class="ml-3 mt-1" style="color: white; "href="{{url_for('model_page')}}">ML Model Details</a>
                     </ul>
                     <form class="form-inline my-2 my-lg-0" form action="{{url_for('search')}}">
                         <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
