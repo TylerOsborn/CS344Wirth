@@ -10,7 +10,7 @@
 <h1 class="mt-5 ml-5" style="color: rgb(47, 57, 72);">Clustering Visualisation</h1>
 <p class="ml-5" style="color: rgb(47, 57, 72);">k = 30</p>
 
-<div id="cluster" class="cluster pt-8 container-fluid w-100 h-100">
+<div id="cluster" class="cluster container-fluid w-100 h-100" style="margin-top: 5%">
 
 </div>
 
@@ -21,7 +21,7 @@
 var color = d3.scale.category20()
 
 var width = 2000,
-  height = 1700
+  height = 1900
 
 var svg = d3
   .select("#cluster")
@@ -32,8 +32,10 @@ var svg = d3
 var force = d3.layout
   .force()
   .gravity(2)
-  .distance(50)
-  .charge(-3000)
+  .distance(70)
+  .charge(-4500)
+  //.distance(50)
+  //.charge(-3000)
   .size([width, height])
 
 d3.json("{{url_for('cluster_data')}}", function (json) {
@@ -60,7 +62,7 @@ d3.json("{{url_for('cluster_data')}}", function (json) {
     .attr("fill", function (d) {
       return color(d.color / 400)
     })
-    .attr("r", "25")
+    .attr("r", "35")
 
   node
     .append("text")
