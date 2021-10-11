@@ -1,7 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request
 import pandas as pd
 import test_recommender as recommender
-from siamese import siamese
 import os
 import json
 
@@ -35,11 +34,12 @@ def item_page():
         recommendations, scores = recommender.get_recommendations(product_id)
         product = recommender.get_item(product_id)
         clusters = [recommender.get_cluster(product_id)]
+        silhouette = recommender.get_silhouette()
         for i in range(len(recommendations)):
             clusters.append(recommender.get_cluster(recommendations['catalogItemId'].iloc[i]))
         return render_template("store/item_page.html", product=product, recommendations=recommendations, scores=scores,
-                               clusters=clusters)
-    return render_template("store/item_page.html", product=None, recommendations=None, clusters=None)
+                               clusters=clusters, silhouette=silhouette)
+    return render_template("store/item_page.html", product=None, recommendations=None, clusters=None, silhouette=None)
 
 
 @app.route("/search", methods=["GET", "POST"])
@@ -66,3 +66,4 @@ def cluster_data():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
