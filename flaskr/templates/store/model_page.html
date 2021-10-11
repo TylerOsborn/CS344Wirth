@@ -1,0 +1,299 @@
+{% extends  "base.html" %}
+{% block title %} Home {% endblock %}
+
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript" async=""
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<div class=" mt-5 mb-5 model" style="width:80%; margin-left: 13%;">
+    <br/>
+    <h1>Model Selection</h1>
+    <div class="ml-4 mr-4">
+        <div class="m-4">
+            <h3>Types of Models</h3>
+            <div class="m-4">
+                <p>The most common recommender models:
+                <ul>
+                    <li>Content-Based Recommender</li>
+                    <li>Collaborative Recommender system</li>
+                    <li>Item-Item Collaborative recommender system</li>
+                    <li>Hybrid recommender system</li>
+                </ul>
+                <h4>Content-Based Recommender</h4>
+                <p>Content-based filtering methods are based on a description of the item and potentially a profile of
+                    the
+                    user's
+                    preferences. A content-based recommender is best suited to scenarios where there is known data on an
+                    item
+                    but
+                    not on the user, which seems is ideal for the scope of the project we have been given. Content-based
+                    recommenders
+                    are a form of classification problem. In this system, keywords are used to describe the items This
+                    approach
+                    has
+                    its roots in information retrieval and information filtering research.
+                </p>
+                <h4>Collaborative Recommender System</h4>
+                <p>Discussion of collaborative recommender.</p>
+                <h4>Item-Item Collaborative Recommender</h4>
+                <p>Item-item collaborative recommenders recommend products based on past history of products examined.
+                    For
+                    the
+                    scenario we have been given we can set the item history to only contain the current item being
+                    examined,
+                    the
+                    caveat of this is that it doesn’t make use of the full power of collaborative based fileting which
+                    as
+                    the
+                    item
+                    history is limited to one. It however does allow for the potential improvement of tailoring
+                    recommendations
+                    to a
+                    user the more they browse products, however, this system doesn’t take into account whether the user
+                    likes
+                    the
+                    products that he/she is browsing.</p>
+                <h4>Hybrid Recommender System</h4>
+                <p>As the name suggests, a hybrid recommender system is a combination of two to or more recommendation
+                    systems.
+                    This would be best suited to a scenario where users can create a profile on your website to shop or
+                    alternatively shop on your website
+                    without having to have an established profile. The former lends itself to collaborative based
+                    filtering
+                    while the latter lends itself to
+                    content based filtering.</p>
+            </div>
+        </div>
+    </div>
+    <h1 class="mt-5">Model Development</h1>
+    <div class="ml-4 mr-4">
+        <h3 class="mt-3">Data Preparation</h3>
+        <p class="m-4">The raw product data looks as follows:</p>
+        <pre class="m-4">{
+            "_index": "productdata_1_9",
+            "_type": "_doc",
+            "_id": "7183_\t723751123273818114",
+            "_score": null,
+            "_source": {
+                "lastUpdated": "Sep 4, 2021 6:17:14 PM",
+                "marketplaceProduct": true,
+                "version": 0,
+                "catalogId": 7183,
+                "campaignId": 12108,
+                "catalogItemId": "\t723751123273818114",
+                "name": "12.5 inch glass water bongs rainbow glass bong Luminous Beaker Bong hookah water pipes with 14mm glass bowl joint Downstem for smoking",
+                "description": "glass bong 2 Exquisite 3 Fast Shipping 4 hot Sale 5 High Quality But Low Price 6 New 7 hot sale",
+                "category": "Home & Garden > Household Sundries > Smoking Accessories > Hookahs",
+                "labels": [
+                    "5%"
+                ],
+                "imageUrl": "http://www.dhresource.com/600x600/f2/albu/g9/M00/73/BD/rBVaWF7ACv-AMtOYAALJKF6U9BY954.jpg",
+                "stockAvailability": "InStock",
+                "productUrl": "https://www.dhgate.comproduct/manufacturer-sells-high-borosilicate-glass/487229638.html",
+                "currentPrice": 33.9,
+                "originalPrice": 39.88,
+                "dollarPrice": 33.9,
+                "discountPercentage": 14,
+                "currency": "USD",
+                "pricing": {
+                    "currency": "USD",
+                    "currentPrice": 33.9,
+                    "originalPrice": 39.88,
+                    "dollarPrice": 33.9,
+                    "discountPercentage": 14
+                },
+                "inventory": {},
+                "availability": {
+                    "stockAvailability": "InStock"
+                },
+                "shipping": {},
+                "taxonomy": {
+                    "category": "Home & Garden > Household Sundries > Smoking Accessories > Hookahs"
+                },
+                "physicalAttributes": {},
+                "targetDemographics": {
+                    "adult": false
+                },
+                "identification": {
+                    "identifierExists": true
+                },
+                "custom": {},
+                "variant": {
+                    "isParent": false
+                },
+                "customFields": {
+                    "ProductUrl1": "https://www.dhgate.comproduct/manufacturer-sells-high-borosilicate-glass/487229638.html",
+                    "item_group_id": "487229638"
+                }
+            },
+            "sort": [
+                "\t723751123273818114"
+            ]
+        }</pre>
+        <p class="m-4">The data at hand wasn't didn't lend itself to the traditional machine learning data encoding of
+            one-hot
+            encoding to form a feature matrix as the bulk of the comparable product data is contained with in the
+            <code>name</code> and <code>description</code> tags, which doesn't lend itself to one-hot encoding.
+            Additional
+            fields such as the <code>labels</code> and <code>category</code> fields also contained some data that would
+            prove useful, but these field are somewhat arbitrary and are difficult to encode in the traditional manner.
+            After doing a bit of research it seemed like a TFIDF matrix would be most appropriate for the given dataset.
+        </p>
+        <h3 class="mt-4">Term Frequency Inverse Document Frequency</h3>
+        <p class="m-4">As mentioned above, the bulk of the comparable data resided in the <code>name</code> and <code>description</code>
+            fields. TF-IDF allows for us to extract and analyse these fields in a numerical sense. The entails computing
+            the word vector for each product, consisting of the words found within the name and description field of the
+            product. In essence, the TF-IDF score is the frequency of a word occurring in the product description,
+            down-weighted
+            by the number of products in which it occurs. This is done to reduce the importance of words that frequently
+            occur in the name and description fields and, therefore, their significance in computing the final
+            similarity score.
+        </p>
+        <p class="m-4">Here is an example of what a portion of an TF-IDF table would look like:</p>
+        <div style="width: 40%; margin-left: 29%;">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Term</th>
+                    <th scope="col">TF</th>
+                    <th scope="col">IDF</th>
+                    <th scope="col">Normalised IDF</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">car</th>
+                    <td>1816</td>
+                    <td>1.65</td>
+                    <td>0.23</td>
+                </tr>
+                <tr>
+                    <th scope="row">gps</th>
+                    <td>675</td>
+                    <td>2.08</td>
+                    <td>0.42</td>
+                </tr>
+                <tr>
+                    <th scope="row">candy</th>
+                    <td>1924</td>
+                    <td>1.61</td>
+                    <td>0.35</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="m-4">If we perform a DF for all th products in the data set we will generate a matrix as seen below,
+            where the rows represent a product, and the columns a term with <em>f(i, j)</em> representing the frequency
+            of term <em>j</em> for product <em>i.</em></p>
+
+        <p style="margin-right: 15%;"><span class="math display">\[TF_{n\times n} =
+  \left[ {\begin{array}{cccc}
+    f_{11} &amp; f_{12} &amp; \cdots &amp; f_{1n}\\
+    f_{21} &amp; f_{22} &amp; \cdots &amp; f_{2n}\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+    f_{n1} &amp; f_{n2} &amp; \cdots &amp; f_{nn}\\
+  \end{array} } \right]\]</span></p>
+
+
+        <p class="m-4">The inverse document frequency is then calculated as:</p>
+        <div style="margin-right: 12%;">
+            <p><span class="math display">\[IDF = log\left(\frac{N}{DF_{t}}\right)\]</span></p>
+        </div>
+
+        <p class="m-4">
+            The resulting TF-IDF matrix then allows us to compute the <strong>cosine similarity</strong> score.
+        </p>
+        <h3 class="mt-5">Cosine Similarity</h3>
+        <p class="m-4">Cosine similarity is the cosine of the angle between two n-dimensional vectors in an
+            n-dimensional
+            space, where the n dimensional vectors in our case are the TF-IDF word vectors.
+        </p>
+        <div style="margin-left: 28%;">
+            <p><span class="math inline">\(similarity = cos(\theta) = \dfrac{\boldsymbol{u} \cdot \boldsymbol{v}}{\|{\boldsymbol{u}}\|\|{\boldsymbol{v}}\|} = \dfrac{\sum_{i = 1}^n u_iv_i}{\sqrt{\sum_{i = 1}^n u_i^2}\sqrt{\sum_{i = 1}^n v_i^2}}\)</span>
+            </p>
+        </div>
+        <p class="m-4">
+            From the formula above we can see that mathematically cosine similarity is the dot product of the two
+            vectors
+            (products) divided by the product of the two vectors' lengths. If two products have highly similar vectors
+            then their dot products will be close to one as the angle theta will be zero. Conversely if two products
+            share
+            very few common words, their TF-IDF vectors have a large radial angle seperating them, which will result
+            in a similarity score close to zero.</p>
+        <img src="{{url_for('static',filename='cosine-sim.png')}}" style="margin-left: 31%; height: 40%;"/>
+
+        <p class="m-4">We perform this vector comparison for all products and store the result in a matrix. The cosine
+            similarity matrix then provides us with a matrix of similarity scores for all products which can be indexed
+            appropriately
+            when making product recommendations. Index (i, j) yields the similarity score for products i and j.</p>
+        <p style="margin-right: 12%;"><span class="math display">\[A_{n\times n} =
+  \left[ {\begin{array}{cccc}
+    1 &amp; 0.04236713 &amp; \cdots &amp; 0.45870831\\
+    0.04236713 &amp; 1 &amp; \cdots &amp; 0.79837412\\
+    \vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
+    0.45870831 &amp; 0.28589668 &amp; \cdots &amp; 1\\
+  \end{array} } \right]\]</span></p>
+        <p class="m-4">For the above matrix, the similarity between product 1 and product 2 is extremely low, whereas
+            the
+            similarity between products 2 and the nth product are quite high, indicating that these two products are
+            quite similar.
+            We can then use this matrix when recommending products by seeking the products with the highest similarity
+            scores.</p>
+    </div>
+    <h1 class="mt-5">Result Validation</h1>
+    <div class="ml-4 mr-4 mb-5">
+        <p class="m-4">Each product recommendation contains 3 metrics by which the recommendation can be validated
+            against. These being the
+            similarity score, the cluster of the product being recommended and the silhouette score. Below is an example
+            of a recommended product card:</p>
+
+        <div class="card box-shadow" style="width: 20%; margin-left: 40%; margin-top: 5%">
+            <a href="/item?product_id=011893690">
+                <img class="card-img-top" src="https://s7d2.scene7.com/is/image/academy/10051362?wid=800&amp;hei=800"
+                     style="max-height: 100%; max-width: 100%;">
+            </a>
+            <div class="card-body">
+                <div class="card-text">
+                    <a href="/item?product_id=011893690">
+                        <p>Classic Pocket Knife</p>
+                    </a>
+                    <p>Similarity Score: 59.68%</p>
+                    <p>Cluster: 2</p>
+                    <p>Silhouette Score: 0.2120</p>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="mt-3">Similarity Score</h3>
+        <p class="m-4">The similarity score is the value held within the cosine similarity metric converted to a
+            percentage.
+            It is just a measure of how similar the word vectors of the respective products are.</p>
+        <h3 class="mt-3">Clustering</h3>
+        <p class="m-4">
+            To further confirm that the model is working as expected, the product data was clustered into 30 clusters.
+            The size of the data set is 375 products so a k value of 30 provides sufficiently large variety cluster
+            sizes. A
+            visualisation of the clusters can be viewed <a href="{{url_for('cluster_page')}}">here.</a> The cluster of
+            the root product
+            can be compared to the clusters of the recommended products to confirm whether in fact the recommender is
+            recommending similar products as expected.</p>
+        <h3 class="mt-3">Silhouette Score</h3>
+        <p class="m-4">The silhouette score is a metric used to calculate how well a data set is clustered. Its value
+            ranges from -1 to 1, with 1 being the best score and -1 being the worst score to obtain. The silhouette
+            score
+            in this context just gives an indication as to how reliable the cluster results are. </p>
+    </div>
+    <br/>
+</div>
+{% endblock %}
+
+
+
+
+

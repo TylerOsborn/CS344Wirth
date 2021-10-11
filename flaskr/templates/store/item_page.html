@@ -48,11 +48,9 @@
                             <a href="{{url_for('item_page', product_id=recommendations.iloc[i]['catalogItemId'])}}">
                                 <p>{{recommendations['name'].iloc[i]}}</p>
                             </a>
-
-                            <i class="far fa-smile"></i>
-
                             <p>Sim Score: {{"{:.2f}".format(scores[i] * 100)+"%"}}</p>
                             <p>Cluster: {{clusters[i+1]}}</p>
+                            <p>Silhouette Score: {{"{:.4f}".format(silhouette)}}</p>
                             <p>Siamese Scores: 0</p>
                         </div>
                     </div>

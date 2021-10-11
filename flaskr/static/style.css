@@ -29,6 +29,18 @@
     text-align: center;
 }
 
+.cluster {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
 .impact {
     background-color: rgb(47, 57, 72);
     position: absolute;
@@ -91,4 +103,27 @@
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
     color: white;
+}
+
+.link {
+stroke: rgb(47, 57, 72);
+}
+
+.node text {
+font: 10px sans-serif;
+fill: rgb(47, 57, 72);
+}
+
+.path text {
+font: 15px sans-serif;
+fill: #fff;
+}
+
+.node circle {
+stroke: rgb(0, 0, 0);
+stroke-width: 0px;
+}
+
+.graph h1 {
+color: white;
 }

@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import re
+from sklearn.metrics import silhouette_samples, silhouette_score
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
@@ -97,13 +98,21 @@ tfidf_matrix = tfidf.fit_transform(item_data['soup'])
 def get_cluster(product_id):
     product = get_item(product_id)
     if product is not None:
-        kmeans = KMeans(n_clusters=39, random_state=1).fit(tfidf_matrix)
+        kmeans = KMeans(n_clusters=30, random_state=1).fit(tfidf_matrix)
         cluster = kmeans.predict(tfidf.transform([product['name'].iloc[0].lower() + "," +
                                                   product['description'].iloc[0].lower() +
                                                   product['category'].iloc[0].lower()]))
         return cluster[0]
     else:
         return -1
+
+
+def get_silhouette():
+    k = 30
+    kmeans = KMeans(n_clusters=k, random_state=1)
+    cluster_labels = kmeans.fit_predict(tfidf_matrix.toarray())
+    score = silhouette_score(tfidf_matrix.toarray(), cluster_labels, random_state=1)
+    return score
 
 # print(get_recommendations('022150254', item_data, return_num=10, index_name='catalogItemId'))
 # search_products("gps")

@@ -1,0 +1,98 @@
+{% extends  "base.html" %}
+{% block title %} Home {% endblock %}
+
+{% block head %}
+{{ super() }}
+
+{% endblock %}
+
+{% block content %}
+<h1 class="mt-5 ml-5" style="color: rgb(47, 57, 72);">Clustering Visualisation</h1>
+<p class="ml-5" style="color: rgb(47, 57, 72);">k = 30</p>
+
+<div id="cluster" class="cluster container-fluid w-100 h-100" style="margin-top: 5%">
+
+</div>
+
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://d3js.org/d3-scale.v3.min.js"></script>
+
+<script>
+var color = d3.scale.category20()
+
+var width = 2000,
+  height = 1900
+
+var svg = d3
+  .select("#cluster")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height)
+
+var force = d3.layout
+  .force()
+  .gravity(2)
+  .distance(70)
+  .charge(-4500)
+  //.distance(50)
+  //.charge(-3000)
+  .size([width, height])
+
+d3.json("{{url_for('cluster_data')}}", function (json) {
+  force.nodes(json.nodes).links(json.links).start()
+
+  var link = svg
+    .selectAll(".link")
+    .data(json.links)
+    .enter()
+    .append("line")
+    .attr("class", "link")
+    .style("stroke-width", 1.5)
+
+  var node = svg
+    .selectAll(".node")
+    .data(json.nodes)
+    .enter()
+    .append("g")
+    .attr("class", "node")
+    .call(force.drag)
+
+  node
+    .append("circle")
+    .attr("fill", function (d) {
+      return color(d.color / 400)
+    })
+    .attr("r", "35")
+
+  node
+    .append("text")
+    .attr("dy", ".35em")
+    .attr("text-anchor", "middle")
+    .text(function (d) {
+      return d.name
+    })
+
+  force.on("tick", function () {
+    link
+      .attr("x1", function (d) {
+        return d.source.x
+      })
+      .attr("y1", function (d) {
+        return d.source.y
+      })
+      .attr("x2", function (d) {
+        return d.target.x
+      })
+      .attr("y2", function (d) {
+        return d.target.y
+      })
+
+    node.attr("transform", function (d) {
+      return "translate(" + d.x + "," + d.y + ")"
+    })
+  })
+})
+</script>
+{% endblock %}
+
+
