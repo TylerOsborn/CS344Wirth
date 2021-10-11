@@ -156,7 +156,7 @@
       "color": 16
     },
     {
-      "name": "Artificial Tulips",
+      "name": "Fake Tulips",
       "group": 31,
       "color": 16
     },
@@ -181,12 +181,12 @@
       "color": 16
     },
     {
-      "name": "Chocolate Tootsie Roll",
+      "name": "Chocolate Roll",
       "group": 36,
       "color": 19
     },
     {
-      "name": "Easter Tootsie Roll",
+      "name": "Easter Roll",
       "group": 37,
       "color": 19
     },
@@ -201,12 +201,12 @@
       "color": 19
     },
     {
-      "name": "Mixed Tootsie Roll",
+      "name": "Mixed Roll",
       "group": 40,
       "color": 16
     },
     {
-      "name": "Mini Jelly Belly",
+      "name": "Jelly Belly S",
       "group": 41,
       "color": 19
     },
@@ -236,7 +236,7 @@
       "color": 3
     },
     {
-      "name": "Lavender Chocolate",
+      "name": "Purple Chocolate",
       "group": 47,
       "color": 3
     },
@@ -256,7 +256,7 @@
       "color": 3
     },
     {
-      "name": "Light-Blue Chocolate",
+      "name": "L-Blue Chocolate",
       "group": 51,
       "color": 3
     },
@@ -331,7 +331,7 @@
       "color": 21
     },
     {
-      "name": "Orange Lip Balm",
+      "name": "Orange Balm",
       "group": 66,
       "color": 21
     },
@@ -346,7 +346,7 @@
       "color": 21
     },
     {
-      "name": "Halloween Costume",
+      "name": "Costume",
       "group": 69,
       "color": 16
     },
@@ -381,7 +381,7 @@
       "color": 2
     },
     {
-      "name": "Anti-bacterial Bar Soap",
+      "name": "Detol Bar Soap",
       "group": 76,
       "color": 24
     },
@@ -396,17 +396,17 @@
       "color": 24
     },
     {
-      "name": "Knit Bassinet Sheet Ecur",
+      "name": "Ecur Crib Sheet",
       "group": 79,
       "color": 24
     },
     {
-      "name": "Sage Bassinet Sheet",
+      "name": "Sage Crib Sheet",
       "group": 80,
       "color": 24
     },
     {
-      "name": "Knit Bassinet Sheet Sage",
+      "name": "Grey Crib Sheet",
       "group": 81,
       "color": 16
     },
@@ -416,22 +416,22 @@
       "color": 16
     },
     {
-      "name": "Nike Fuel Jug White",
+      "name": "Nike Jug Wht",
       "group": 83,
       "color": 27
     },
     {
-      "name": "Nike Fuel Jug Black",
+      "name": "Nike Jug Blk",
       "group": 84,
       "color": 27
     },
     {
-      "name": "Nike Fuel Jug Blue",
+      "name": "Nike Jug Blu",
       "group": 85,
       "color": 27
     },
     {
-      "name": "Nike Fuel Jug Red",
+      "name": "Nike Jug Red",
       "group": 86,
       "color": 27
     },
@@ -441,12 +441,12 @@
       "color": 26
     },
     {
-      "name": "Tower Fan Tilt",
+      "name": "Tilt Fan",
       "group": 88,
       "color": 26
     },
     {
-      "name": "Hello-Kitty Bottle",
+      "name": "Kitty Bottle",
       "group": 89,
       "color": 16
     },
@@ -486,12 +486,12 @@
       "color": 26
     },
     {
-      "name": "Aircon Small",
+      "name": "Aircon Sml",
       "group": 97,
       "color": 26
     },
     {
-      "name": "Airon Large",
+      "name": "Aircon Lrg",
       "group": 98,
       "color": 26
     },
@@ -541,7 +541,7 @@
       "color": 12
     },
     {
-      "name": "Folding Hunting Knife",
+      "name": "Hunting Knife",
       "group": 108,
       "color": 5
     },
@@ -551,17 +551,17 @@
       "color": 5
     },
     {
-      "name": "Folding Pocket Knife",
+      "name": "Pocket Knife",
       "group": 110,
       "color": 5
     },
     {
-      "name": "Pocket Knife",
+      "name": "Pocket Knives",
       "group": 111,
       "color": 5
     },
     {
-      "name": "Mini Folding Knife",
+      "name": "Folding Knives",
       "group": 112,
       "color": 5
     },
@@ -571,12 +571,12 @@
       "color": 5
     },
     {
-      "name": "Classic Pocket Knife",
+      "name": "Classic Knife",
       "group": 114,
       "color": 5
     },
     {
-      "name": "Mattress Hand Pump",
+      "name": "Hand Pump",
       "group": 115,
       "color": 22
     },
@@ -641,22 +641,22 @@
       "color": 22
     },
     {
-      "name": "Bantam Folding Knife",
+      "name": "Bantam Knife",
       "group": 128,
       "color": 5
     },
     {
-      "name": "Bantam Pocket Knife",
+      "name": "Bantam Knife S",
       "group": 129,
       "color": 5
     },
     {
-      "name": "Army Multi-Tool",
+      "name": "Multi-Tool",
       "group": 130,
       "color": 13
     },
     {
-      "name": "Sweet Folding Knife",
+      "name": "Sweet Knife",
       "group": 131,
       "color": 5
     },
@@ -666,17 +666,17 @@
       "color": 22
     },
     {
-      "name": "Game Shears Silver",
+      "name": "Game Shears",
       "group": 133,
       "color": 13
     },
     {
-      "name": "Ops Pocket Knife",
+      "name": "Ops Knife",
       "group": 134,
       "color": 5
     },
     {
-      "name": "Solo Pocket Knife",
+      "name": "Solo Knife",
       "group": 135,
       "color": 5
     },
@@ -686,7 +686,7 @@
       "color": 5
     },
     {
-      "name": "Lite Pocket Knife",
+      "name": "Lite Knife",
       "group": 137,
       "color": 5
     },
@@ -701,12 +701,12 @@
       "color": 13
     },
     {
-      "name": "3-Blade Knife",
+      "name": "Blade Knife 3",
       "group": 140,
       "color": 5
     },
     {
-      "name": "2-Blade Knife",
+      "name": "Blade Knife 2",
       "group": 141,
       "color": 5
     },
@@ -716,27 +716,27 @@
       "color": 5
     },
     {
-      "name": "Fixed-Blade Knives",
+      "name": "Fixed Knives",
       "group": 143,
       "color": 13
     },
     {
-      "name": "Mini Pocket Knife",
+      "name": "Mini Knife",
       "group": 144,
       "color": 5
     },
     {
-      "name": "Camo Folding Knife",
+      "name": "Camo Knife",
       "group": 145,
       "color": 5
     },
     {
-      "name": "14-in-1 Multi-Tool",
+      "name": "14-in-1 Tool",
       "group": 146,
       "color": 13
     },
     {
-      "name": "Black Multi-Tool",
+      "name": "Black Tool",
       "group": 147,
       "color": 13
     },
@@ -746,7 +746,7 @@
       "color": 22
     },
     {
-      "name": "Mini Lanterns",
+      "name": "Mini Lantern",
       "group": 149,
       "color": 22
     },
@@ -756,12 +756,12 @@
       "color": 16
     },
     {
-      "name": "Hand-held Spotlight",
+      "name": "Hand Spotlight",
       "group": 151,
       "color": 22
     },
     {
-      "name": "Buck Bones Knife",
+      "name": "Bones Knife",
       "group": 152,
       "color": 5
     },
@@ -771,32 +771,32 @@
       "color": 22
     },
     {
-      "name": "Cryo Folding Knife",
+      "name": "Cryo Knife",
       "group": 154,
       "color": 5
     },
     {
-      "name": "Tanto Folding Knife",
+      "name": "Tanto Knife",
       "group": 155,
       "color": 5
     },
     {
-      "name": "Army Multi-Tool Classic",
+      "name": "Multi-Tool Gld",
       "group": 156,
       "color": 13
     },
     {
-      "name": "Army Multi-Tool Red",
+      "name": "Multi-Tool Red",
       "group": 157,
       "color": 13
     },
     {
-      "name": "Army Multi-Tool Black",
+      "name": "Multi-Tool Blk",
       "group": 158,
       "color": 13
     },
     {
-      "name": "Army Multi-Tool Recruit",
+      "name": "Multi-Tool Blu",
       "group": 159,
       "color": 13
     },
@@ -816,22 +816,22 @@
       "color": 12
     },
     {
-      "name": "Leakproof Fitting",
+      "name": "LP Fitting",
       "group": 163,
       "color": 12
     },
     {
-      "name": "Button Head Fitting 1",
+      "name": "BH Fitting 1",
       "group": 164,
       "color": 12
     },
     {
-      "name": "Button Head Fitting 2",
+      "name": "BH Fitting 2",
       "group": 165,
       "color": 12
     },
     {
-      "name": "NPTF Button Head Fitting",
+      "name": "NPTF BH Fitting",
       "group": 166,
       "color": 12
     },
@@ -886,12 +886,12 @@
       "color": 12
     },
     {
-      "name": "Hand Greasegun",
+      "name": "Greasegun Sml",
       "group": 177,
       "color": 12
     },
     {
-      "name": "Heavy-duty Greasegun",
+      "name": "Greasegun Lrg",
       "group": 178,
       "color": 12
     },
@@ -921,7 +921,7 @@
       "color": 16
     },
     {
-      "name": "G3 Touchscreen GPS",
+      "name": "G3 Touch GPS",
       "group": 184,
       "color": 7
     },
@@ -931,7 +931,7 @@
       "color": 16
     },
     {
-      "name": "GPS Digital Skycaddie",
+      "name": "Digital GPS",
       "group": 186,
       "color": 8
     },
@@ -941,7 +941,7 @@
       "color": 16
     },
     {
-      "name": "G6 Touchscreen GPS",
+      "name": "G6 Touch GPS",
       "group": 188,
       "color": 7
     },
@@ -966,7 +966,7 @@
       "color": 7
     },
     {
-      "name": "Laser GPS Rangefinder",
+      "name": "Laser GPS Ranger",
       "group": 193,
       "color": 18
     },
@@ -981,7 +981,7 @@
       "color": 7
     },
     {
-      "name": "Jolt Range Finder",
+      "name": "Jolt Range",
       "group": 196,
       "color": 18
     },
@@ -1001,27 +1001,27 @@
       "color": 8
     },
     {
-      "name": "Gx-3Ia2 Rangefinder",
+      "name": "Gx-3Ia2 Ranger",
       "group": 200,
       "color": 16
     },
     {
-      "name": "Gx-4Ia2 Rangefinder",
+      "name": "Gx-4Ia2 Ranger",
       "group": 201,
       "color": 16
     },
     {
-      "name": "G7 Touchscreen GPS",
+      "name": "G7 Touch GPS",
       "group": 202,
       "color": 7
     },
     {
-      "name": "87 Touchscreen GPS",
+      "name": "87 Touch GPS",
       "group": 203,
       "color": 7
     },
     {
-      "name": "XI1000 Rangefinder",
+      "name": "XI1000 Ranger",
       "group": 204,
       "color": 16
     },
@@ -1031,17 +1031,17 @@
       "color": 18
     },
     {
-      "name": "Touchscreen GPS",
+      "name": "Touch GPS",
       "group": 206,
       "color": 18
     },
     {
-      "name": "Hot Rangefinder",
+      "name": "Hot Range",
       "group": 207,
       "color": 16
     },
     {
-      "name": "Quickshot Rangefinder",
+      "name": "Quickshot Ranger",
       "group": 208,
       "color": 16
     },
@@ -1056,17 +1056,17 @@
       "color": 18
     },
     {
-      "name": "Stats Tracking System",
+      "name": "Stats Tracking",
       "group": 211,
       "color": 7
     },
     {
-      "name": "V400 Rangefinder",
+      "name": "V400 Ranger",
       "group": 212,
       "color": 9
     },
     {
-      "name": "300 Rangefinder",
+      "name": "300 Ranger",
       "group": 213,
       "color": 28
     },
@@ -1076,7 +1076,7 @@
       "color": 28
     },
     {
-      "name": "Linx GPS Watchband",
+      "name": "Linx GPS Watch",
       "group": 215,
       "color": 8
     },
@@ -1086,7 +1086,7 @@
       "color": 18
     },
     {
-      "name": "Jolt x Rangefinder",
+      "name": "Jolt x Ranger",
       "group": 217,
       "color": 18
     },
@@ -1096,12 +1096,12 @@
       "color": 18
     },
     {
-      "name": "Lr5 Rangefinder",
+      "name": "Lr5 Ranger",
       "group": 219,
       "color": 16
     },
     {
-      "name": "Lr5s Rangefinder",
+      "name": "Lr5s Ranger",
       "group": 220,
       "color": 16
     },
@@ -1111,12 +1111,12 @@
       "color": 7
     },
     {
-      "name": "Pincaddie Rangefinder",
+      "name": "Pincaddie Ranger",
       "group": 222,
       "color": 16
     },
     {
-      "name": "Gx-1Ia2 Rangefinder",
+      "name": "Gx-1Ia2 Ranger",
       "group": 223,
       "color": 16
     },
@@ -1126,12 +1126,12 @@
       "color": 18
     },
     {
-      "name": "100 Rangefinder",
+      "name": "100 Ranger",
       "group": 225,
       "color": 9
     },
     {
-      "name": "Vivoactive GPS Watch",
+      "name": "Vivoactive Watch",
       "group": 226,
       "color": 7
     },
@@ -1141,12 +1141,12 @@
       "color": 18
     },
     {
-      "name": "Pulse Rangefinder",
+      "name": "Pulse Ranger",
       "group": 228,
       "color": 16
     },
     {
-      "name": "Laser Rangefinder",
+      "name": "Laser Ranger",
       "group": 229,
       "color": 28
     },
@@ -1156,22 +1156,22 @@
       "color": 28
     },
     {
-      "name": "Micro Laser Rangefinder",
+      "name": "Micro Laser Ranger",
       "group": 231,
       "color": 28
     },
     {
-      "name": "Hybrid Laser Rangefinder",
+      "name": "Hybrid Laser Ranger",
       "group": 232,
       "color": 28
     },
     {
-      "name": "Skycaddie GPS Watch",
+      "name": "Skycaddie GPS",
       "group": 233,
       "color": 8
     },
     {
-      "name": "Nexus Rangefinder",
+      "name": "Nexus Ranger",
       "group": 234,
       "color": 16
     },
@@ -1181,12 +1181,12 @@
       "color": 8
     },
     {
-      "name": "Gx-2Ia2 Rangefinder",
+      "name": "Gx-2Ia2 Ranger",
       "group": 236,
       "color": 16
     },
     {
-      "name": "Switch Tour Rangefinder",
+      "name": "Switch Tour Ranger",
       "group": 237,
       "color": 28
     },
@@ -1211,17 +1211,17 @@
       "color": 18
     },
     {
-      "name": "40I Laser Rangefinder",
+      "name": "40I Laser Ranger",
       "group": 242,
       "color": 28
     },
     {
-      "name": "40 Laser Rangefinder",
+      "name": "40 Laser Ranger",
       "group": 243,
       "color": 28
     },
     {
-      "name": "20 Laser Rangefinder",
+      "name": "20 Laser Ranger",
       "group": 244,
       "color": 28
     },
@@ -1281,117 +1281,117 @@
       "color": 12
     },
     {
-      "name": "Metal Detector",
+      "name": "Metal Detector 1",
       "group": 256,
       "color": 29
     },
     {
-      "name": "Silver Metal Detector",
+      "name": "Metal Detector 2",
       "group": 257,
       "color": 29
     },
     {
-      "name": "Round Compostable Leaf Plate",
+      "name": "Round Plate",
       "group": 258,
       "color": 12
     },
     {
-      "name": "Square Compostable Leaf Plate",
+      "name": "Square Plate",
       "group": 259,
       "color": 12
     },
     {
-      "name": "Compostable Leaf Plate",
+      "name": "Plate",
       "group": 260,
       "color": 12
     },
     {
-      "name": "Assebmly Glove T11",
+      "name": "Garden Glove 1",
       "group": 261,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T2",
+      "name": "Garden Glove 2",
       "group": 262,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T3",
+      "name": "Garden Glove 3",
       "group": 263,
       "color": 14
     },
     {
-      "name": "Assebmly Glove T4",
+      "name": "Garden Glove 4",
       "group": 264,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T5",
+      "name": "Garden Glove 5",
       "group": 265,
       "color": 14
     },
     {
-      "name": "Assebmly Glove T6",
+      "name": "Garden Glove 6",
       "group": 266,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T7",
+      "name": "Garden Glove 7",
       "group": 267,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T8",
+      "name": "Garden Glove 8",
       "group": 268,
       "color": 11
     },
     {
-      "name": "Assebmly Glove T9",
+      "name": "Garden Glove 9",
       "group": 269,
       "color": 14
     },
     {
-      "name": "Assebmly Glove T10",
+      "name": "Garden Glove 10",
       "group": 270,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T11",
+      "name": "Garden Glove 11",
       "group": 271,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T12",
+      "name": "Garden Glove 12",
       "group": 272,
       "color": 14
     },
     {
-      "name": "Assebmly Glove T13",
+      "name": "Garden Glove 13",
       "group": 273,
       "color": 14
     },
     {
-      "name": "Assebmly Glove T14",
+      "name": "Garden Glove 14",
       "group": 274,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T15",
+      "name": "Garden Glove 15",
       "group": 275,
       "color": 14
     },
     {
-      "name": "Assebmly Glove T16",
+      "name": "Garden Glove 16",
       "group": 276,
       "color": 0
     },
     {
-      "name": "Assebmly Glove T17",
+      "name": "Garden Glove 17",
       "group": 277,
       "color": 14
     },
     {
-      "name": "Assebmly Glove T18",
+      "name": "Garden Glove 18",
       "group": 278,
       "color": 0
     },
@@ -1406,102 +1406,102 @@
       "color": 11
     },
     {
-      "name": "Ansell Glove T1",
+      "name": "Ansell Glove 1",
       "group": 281,
       "color": 11
     },
     {
-      "name": "Ansell Glove T2",
+      "name": "Ansell Glove 2",
       "group": 282,
       "color": 11
     },
     {
-      "name": "Ansell Glove T3",
+      "name": "Ansell Glove 3",
       "group": 283,
       "color": 11
     },
     {
-      "name": "Ansell Glove T4",
+      "name": "Ansell Glove 4",
       "group": 284,
       "color": 11
     },
     {
-      "name": "Ansell Glove T5",
+      "name": "Ansell Glove 5",
       "group": 285,
       "color": 14
     },
     {
-      "name": "Ansell Glove T6",
+      "name": "Ansell Glove 6",
       "group": 286,
       "color": 11
     },
     {
-      "name": "Ansell Glove T7",
+      "name": "Ansell Glove 7",
       "group": 287,
       "color": 11
     },
     {
-      "name": "Ansell Glove T8",
+      "name": "Ansell Glove 8",
       "group": 288,
       "color": 11
     },
     {
-      "name": "Ansell Glove T9",
+      "name": "Ansell Glove 9",
       "group": 289,
       "color": 14
     },
     {
-      "name": "Ansell Glove T10",
+      "name": "Ansell Glove 10",
       "group": 290,
       "color": 14
     },
     {
-      "name": "Ansell Glove T11",
+      "name": "Ansell Glove 11",
       "group": 291,
       "color": 14
     },
     {
-      "name": "Ansell Glove T12",
+      "name": "Ansell Glove 12",
       "group": 292,
       "color": 16
     },
     {
-      "name": "Ansell Glove T13",
+      "name": "Ansell Glove 13",
       "group": 293,
       "color": 11
     },
     {
-      "name": "Ansell Glove T14",
+      "name": "Ansell Glove 14",
       "group": 294,
       "color": 11
     },
     {
-      "name": "Ansell Glove T15",
+      "name": "Ansell Glove 15",
       "group": 295,
       "color": 14
     },
     {
-      "name": "Ansell Glove T16",
+      "name": "Ansell Glove 16",
       "group": 296,
       "color": 14
     },
     {
-      "name": "Ansell Glove T17",
+      "name": "Ansell Glove 17",
       "group": 297,
       "color": 14
     },
     {
-      "name": "Sensilite Gloves 1",
+      "name": "Lite Gloves 1",
       "group": 298,
       "color": 11
     },
     {
-      "name": "Sensilite Gloves 2",
+      "name": "Lite Gloves 2",
       "group": 299,
       "color": 11
     },
     {
-      "name": "Sensilite Gloves 3",
+      "name": "Lite Gloves 3",
       "group": 300,
       "color": 11
     },
@@ -1526,52 +1526,52 @@
       "color": 11
     },
     {
-      "name": "Rubber Gloves T1",
+      "name": "Rubber Glove 1",
       "group": 305,
       "color": 11
     },
     {
-      "name": "Rubber Gloves T2",
+      "name": "Rubber Glove 2",
       "group": 306,
       "color": 11
     },
     {
-      "name": "Rubber Gloves T3",
+      "name": "Rubber Glove 3",
       "group": 307,
       "color": 14
     },
     {
-      "name": "Rubber Gloves T4",
+      "name": "Rubber Glove 4",
       "group": 308,
       "color": 14
     },
     {
-      "name": "Rubber Gloves T5",
+      "name": "Rubber Glove 5",
       "group": 309,
       "color": 11
     },
     {
-      "name": "Rubber Gloves T6",
+      "name": "Rubber Glove 6",
       "group": 310,
       "color": 11
     },
     {
-      "name": "IV Metal Detector",
+      "name": "MM Detector 1",
       "group": 311,
       "color": 29
     },
     {
-      "name": "Metal Detector 4000",
+      "name": "MM Detector 2",
       "group": 312,
       "color": 29
     },
     {
-      "name": "Commando Metal Detector",
+      "name": "MM Detector 3",
       "group": 313,
       "color": 29
     },
     {
-      "name": "Metal Detector 2000",
+      "name": "Metal Detector",
       "group": 314,
       "color": 29
     },
@@ -1581,32 +1581,32 @@
       "color": 22
     },
     {
-      "name": "Carharrt Gloves T1",
+      "name": "Carharrt Glove 1",
       "group": 316,
       "color": 15
     },
     {
-      "name": "Carharrt Gloves T2",
+      "name": "Carharrt Glove 2",
       "group": 317,
       "color": 15
     },
     {
-      "name": "Carharrt Gloves T3",
+      "name": "Carharrt Glove 3",
       "group": 318,
       "color": 15
     },
     {
-      "name": "Carharrt Gloves T4",
+      "name": "Carharrt Glove 4",
       "group": 319,
       "color": 15
     },
     {
-      "name": "Carharrt Gloves T5",
+      "name": "Carharrt Glove 5",
       "group": 320,
       "color": 15
     },
     {
-      "name": "Carharrt Gloves T6",
+      "name": "Carharrt Glove 6",
       "group": 321,
       "color": 15
     },
@@ -1636,7 +1636,7 @@
       "color": 22
     },
     {
-      "name": "Junior Metal Detector",
+      "name": "JR Metal Detector",
       "group": 327,
       "color": 29
     },
@@ -1671,7 +1671,7 @@
       "color": 1
     },
     {
-      "name": "Soft-Mouth Trainer",
+      "name": "Soft Trainer",
       "group": 334,
       "color": 1
     },
@@ -1796,7 +1796,7 @@
       "color": 1
     },
     {
-      "name": "Prong Training Collar",
+      "name": "Prong Collar",
       "group": 359,
       "color": 1
     },
@@ -1856,12 +1856,12 @@
       "color": 10
     },
     {
-      "name": "MS Removable Cover T1",
+      "name": "MS Cover T1",
       "group": 371,
       "color": 6
     },
     {
-      "name": "MS Removable Cover T2",
+      "name": "MS Cover T2",
       "group": 372,
       "color": 6
     },
@@ -1871,7 +1871,7 @@
       "color": 20
     },
     {
-      "name": "MS Removable Cover T4",
+      "name": "MS Cover T4",
       "group": 374,
       "color": 6
     },
@@ -1896,22 +1896,22 @@
       "color": 20
     },
     {
-      "name": "MS Removable Cover T9",
+      "name": "MS Cover T9",
       "group": 379,
       "color": 6
     },
     {
-      "name": "MS Removable Cover T10",
+      "name": "MS Cover T10",
       "group": 380,
       "color": 6
     },
     {
-      "name": "MS Removable Cover T11",
+      "name": "MS Cover T11",
       "group": 381,
       "color": 6
     },
     {
-      "name": "MS Removable Cover T12",
+      "name": "MS Cover T12",
       "group": 382,
       "color": 6
     },
@@ -1921,12 +1921,12 @@
       "color": 20
     },
     {
-      "name": "MS Removable Cover T14",
+      "name": "MS Cover T14",
       "group": 384,
       "color": 6
     },
     {
-      "name": "MS Removable Cover T15",
+      "name": "MS Cover T15",
       "group": 385,
       "color": 6
     },
