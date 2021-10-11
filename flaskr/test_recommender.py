@@ -51,13 +51,12 @@ def get_recommender(data):
     matrix = linear_kernel(tfidf_matrix, tfidf_matrix)
     #penalise by price ratio
     for i in range(len(matrix)):
-        for j in range(len(matrix[i])):
+        for j in range(i,len(matrix[i])):
             p1 = data['dollarPrice'].iloc[i]
             p2 = data['dollarPrice'].iloc[j]
             r = min([p1,p2])/max([p1,p2])
             matrix[i][j] = matrix[i][j]*r
-            print("{:.2f}".format(matrix[i][j]), end=' ')
-        print("")
+            matrix[j][i] = matrix[i][j]
     return matrix
 
 
