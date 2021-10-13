@@ -35,10 +35,11 @@ def item_page():
         product = recommender.get_item(product_id)
         clusters = [recommender.get_cluster(product_id)]
         silhouette = recommender.get_silhouette()
+        words = [recommender.get_word_similarities(product_id, i) for i in recommendations['catalogItemId']]
         for i in range(len(recommendations)):
             clusters.append(recommender.get_cluster(recommendations['catalogItemId'].iloc[i]))
         return render_template("store/item_page.html", product=product, recommendations=recommendations, scores=scores,
-                               clusters=clusters, silhouette=silhouette)
+                               clusters=clusters, silhouette=silhouette, words=words)
     return render_template("store/item_page.html", product=None, recommendations=None, clusters=None, silhouette=None)
 
 
