@@ -51,7 +51,7 @@
                             <p>Sim Score: {{"{:.2f}".format(scores[i] * 100)+"%"}}</p>
                             <p>Cluster: {{clusters[i+1]}}</p>
                             <p>Silhouette Score: {{"{:.4f}".format(silhouette)}}</p>
-                            <p>Siamese Scores: 0</p>
+                            <p>Similar Words: {% for j in words[i] %} {{j}}, {% endfor %}</p>
                         </div>
                     </div>
                 </div>
