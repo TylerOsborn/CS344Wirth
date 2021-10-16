@@ -44,6 +44,7 @@ try:
 except KeyError | ValueError:
     print("Null value")
 
+
 def get_recommender(data):
     # object to remove all non-necessary words from the description
     tfidf = TfidfVectorizer(stop_words="english")
@@ -60,6 +61,7 @@ def get_recommender(data):
             matrix[i][j] = matrix[i][j] * r
             matrix[j][i] = matrix[i][j]
     return matrix
+
 
 cosine_sim = get_recommender(item_data)
 
@@ -86,9 +88,32 @@ def get_recommendations(
 
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = sim_scores[1 : return_num + 1]
-    item_indices = [i[0] for i in sim_scores if 0.11 <= i[1] <= 0.98]
-    scores = [i[1] for i in sim_scores if 0.11 <= i[1] <= 0.98]
+    print(sim_scores)
+    count = 1
+    original_item = data.iloc[idx]
+    item_group = "N/A"
+    return_items = []
+    if "variant" in original_item:
+        if "itemGroupId" in original_item["variant"]:
+            item_group = [str(original_item["variant"]["itemGroupId"])]
+
+    while len(return_items) < return_num and count < len(sim_scores):
+        i = sim_scores[count][0]
+        item = data.iloc[i]
+        if "variant" in item:
+            if "itemGroupId" in item["variant"]:
+                var = str(item["variant"]["itemGroupId"])
+                if not var in item_group:
+                    return_items.append(sim_scores[count])
+                    item_group.append(var)
+            else:
+                return_items.append(sim_scores[count])
+        else:
+            return_items.append(sim_scores[count])
+        print(sim_scores[count])
+        count += 1
+    item_indices = [i[0] for i in return_items]
+    scores = [i[1] for i in return_items]
 
     return pd.DataFrame(item_data.iloc[item_indices]), scores
 
@@ -97,7 +122,7 @@ tfidf = TfidfVectorizer(stop_words="english")
 tfidf_matrix = tfidf.fit_transform(item_data["soup"])
 
 
-#get the first ten words used to predict similarity of products
+# get the first ten words used to predict similarity of products
 def get_word_similarities(id1, id2):
     results = []
     item1 = get_item(id1)
@@ -113,6 +138,7 @@ def get_word_similarities(id1, id2):
             results.append(i)
             count = count - 1
     return results
+
 
 def get_cluster(product_id):
     product = get_item(product_id)
@@ -141,6 +167,5 @@ def get_silhouette():
     return score
 
 
-# print(get_recommendations('022150254', item_data, return_num=10, index_name='catalogItemId'))
 # search_products("gps")
 # get_item("022150254")
