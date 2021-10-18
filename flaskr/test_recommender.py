@@ -81,17 +81,16 @@ def get_item(query, data=item_data, column="catalogItemId"):
 def get_recommendations(
     index_id, data=item_data, return_num=6, index_name="catalogItemId"
 ):
-    cosine_sim = get_recommender(data)
+    # cosine_sim = get_recommender(data)
     indices = pd.Series(data.index, index=data[index_name]).drop_duplicates()
 
     idx = indices[index_id]
 
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    print(sim_scores)
     count = 1
     original_item = data.iloc[idx]
-    item_group = "N/A"
+    item_group = []
     return_items = []
     if "variant" in original_item:
         if "itemGroupId" in original_item["variant"]:
@@ -110,7 +109,6 @@ def get_recommendations(
                 return_items.append(sim_scores[count])
         else:
             return_items.append(sim_scores[count])
-        print(sim_scores[count])
         count += 1
     item_indices = [i[0] for i in return_items]
     scores = [i[1] for i in return_items]
