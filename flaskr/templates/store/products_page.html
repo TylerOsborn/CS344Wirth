@@ -7,44 +7,8 @@
 {% endblock %}
 
 {% block content %}
+<body class="bg-light">
 <div class="container-fluid w-100 h-100 bg-light">
-    <div class="fixed-left h-100" style="background-color: rgb(227, 71, 71); border: none; color: white;">
-        <div class="row mt-1 ml-1">
-            <div class="col-md-9 mb-4 p-3 ml-2">
-                <section id="sidebar">
-                    <section id="filters">
-                        <h5 class="pt-2 mb-4 mt-3">Filters</h5>
-                        <!-- Section: Filter By Type -->
-                        <section class="mb-4" style="width: 100%;">
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="male">
-                                <label class="form-check-label small card-link-secondary" for="male">Male</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="female">
-                                <label class="form-check-label small card-link-secondary" for="female">Female</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="unisex">
-                                <label class="form-check-label small card-link-secondary" for="unisex">Unisex</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="adult">
-                                <label class="form-check-label small card-link-secondary" for="adult">Adult</label>
-                            </div>
-                            <div class="form-check pl-0 mb-3 ml-4">
-                                <input type="checkbox" class="form-check-input filled-in" id="price">
-                                <label class="form-check-label small card-link-secondary" for="price">Price</label>
-                            </div>
-                            <input type="range" value="25" min="1" max="500" step="5"
-                                   oninput="this.nextElementSibling.value = this.value"> $
-                            <output>25</output>
-                        </section>
-                    </section>
-                </section>
-            </div>
-        </div>
-    </div>
     <!-- Products -->
     <div class="abs-right pt-5 pl-5 bg-light" style="width: 85%;">
         {% for i in range(4) %}
@@ -81,4 +45,5 @@
         </section>
     </div>
 </div>
+</body>
 {% endblock %}
