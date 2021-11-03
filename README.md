@@ -19,6 +19,9 @@ Add project description.
 Any frameworks we use go here.
 * [Bootstrap](https://getbootstrap.com)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+* [Pandas](https://pandas.pydata.org/)
+* [sklearn](https://scikit-learn.org/stable/)
+* [nltk](https://www.nltk.org/)
 
 
 <!-- GETTING STARTED -->
@@ -39,7 +42,7 @@ Instructions on how to install the app need to be added
    ```
 3. Run the app
    ```JS
-   add run instructions
+   python3 store.py
    ```
 
 <!-- CONTRIBUTORS -->
