@@ -5,7 +5,7 @@
   <p align="center">
     The repository for the CS344 Wirth team semester project with Impact.
     <br />
-    <a href="">View Demo</a>
+    <a href="https://wirth344recommender.herokuapp.com/">View Demo</a>
   </p>
 </p>
 <br /> 
@@ -13,10 +13,10 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Add project description.
+Impact allows partners to search and filter for products they wish to promote, very similar to most e-commerce websites. Using product data as well as data collected from partner behaviour. The goal of the project was to build a product recommendation system that recommends appropriate products to a user based on the product that they are currently viewing. Alongside a product recommendation are a few metrics that infer how accurate the product recommendation is.
 
 ### Built With
-Any frameworks we use go here.
+
 * [Bootstrap](https://getbootstrap.com)
 * [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 * [Pandas](https://pandas.pydata.org/)
@@ -27,21 +27,19 @@ Any frameworks we use go here.
 <!-- GETTING STARTED -->
 ## Getting Started
 
-Instructions on how to run.
-
 ### Installation
 
 Instructions on how to install the app need to be added
 1. Clone the repo
    ```sh
-   git clone repo_link
+   git clone https://github.com/TylerOsborn/CS344Wirth.git
    ```
 2. Install the program requirements
    ```sh
    pip3 install -r requirements.txt
    ```
 3. Run the app
-   ```JS
+   ```
    python3 store.py
    ```
 
@@ -63,7 +61,4 @@ With assistance from Impact developers
 * Jordan Masakuna
 * Mbuso Nhleko
 
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-Add any resources used
 
