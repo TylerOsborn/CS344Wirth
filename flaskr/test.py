@@ -1,7 +1,7 @@
 import json
 import unittest
 import requests
-import test_recommender as recommender
+import recommender as recommender
 
 
 class Tests(unittest.TestCase):

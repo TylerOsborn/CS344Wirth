@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request
 import pandas as pd
-import test_recommender as recommender
+import recommender as recommender
 import os
 import json
 
