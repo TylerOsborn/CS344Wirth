@@ -12,7 +12,7 @@ pd.set_option("display.max_colwidth", None)
 data = pd.read_json("../combined.json")
 item_data = pd.DataFrame([i["_source"] for i in data["data"]])
 
-
+# Ensure all rows of the DataFrame contain the same fields
 def homogenize(data):
     for i in data:
         bool_series = pd.isnull(data[i])
@@ -22,14 +22,8 @@ def homogenize(data):
 homogenize(item_data)
 
 
-# combine all relevant datafields into a single field for processing
-def soupify(data):
-    data["soup"] = ""
-    for i in data:
-        data["soup"] += str(data[i]) + " "
-
-
-# soupify(item_data)
+# create a 'soup' of words to be passed to the agorithm for creating the
+# similarity matrix
 item_data["soup"] = (
     item_data["description"].str.lower() + ", " + item_data["name"].str.lower()
 )
@@ -45,6 +39,7 @@ except KeyError | ValueError:
     print("Null value")
 
 
+# returns a similarity matrix based on similar words among descriptions
 def get_recommender(data):
     # object to remove all non-necessary words from the description
     tfidf = TfidfVectorizer(stop_words="english")
@@ -65,12 +60,13 @@ def get_recommender(data):
 
 cosine_sim = get_recommender(item_data)
 
-
+# returns results containing the query as a substring of the 'soup'
 def search_products(query, data=item_data):
     results = data[data["soup"].str.find(query.lower()) > 0]
     return results
 
 
+# returns an item based on column value
 def get_item(query, data=item_data, column="catalogItemId"):
     product = data[data[column] == query]
     if not product.empty:
@@ -86,7 +82,6 @@ def get_recommendations(
     upper_limit=0.95,
     lower_limit=0.10,
 ):
-    # cosine_sim = get_recommender(data)
     indices = pd.Series(data.index, index=data[index_name]).drop_duplicates()
 
     idx = indices[index_id]
@@ -170,5 +165,3 @@ def get_silhouette():
     cluster_labels = kmeans.fit_predict(tfidf_matrix.toarray())
     score = silhouette_score(tfidf_matrix.toarray(), cluster_labels, random_state=1)
     return score
-
-
