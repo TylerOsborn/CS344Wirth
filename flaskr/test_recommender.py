@@ -79,7 +79,12 @@ def get_item(query, data=item_data, column="catalogItemId"):
 
 
 def get_recommendations(
-    index_id, data=item_data, return_num=6, index_name="catalogItemId"
+    index_id,
+    data=item_data,
+    return_num=6,
+    index_name="catalogItemId",
+    upper_limit=0.95,
+    lower_limit=0.10,
 ):
     # cosine_sim = get_recommender(data)
     indices = pd.Series(data.index, index=data[index_name]).drop_duplicates()
@@ -99,16 +104,18 @@ def get_recommendations(
     while len(return_items) < return_num and count < len(sim_scores):
         i = sim_scores[count][0]
         item = data.iloc[i]
-        if "variant" in item:
-            if "itemGroupId" in item["variant"]:
-                var = str(item["variant"]["itemGroupId"])
-                if not var in item_group:
+        score = sim_scores[count][1]
+        if score < upper_limit and score > lower_limit:
+            if "variant" in item:
+                if "itemGroupId" in item["variant"]:
+                    var = str(item["variant"]["itemGroupId"])
+                    if not var in item_group:
+                        return_items.append(sim_scores[count])
+                        item_group.append(var)
+                else:
                     return_items.append(sim_scores[count])
-                    item_group.append(var)
             else:
                 return_items.append(sim_scores[count])
-        else:
-            return_items.append(sim_scores[count])
         count += 1
     item_indices = [i[0] for i in return_items]
     scores = [i[1] for i in return_items]
