@@ -172,5 +172,3 @@ def get_silhouette():
     return score
 
 
-# search_products("gps")
-# get_item("022150254")
