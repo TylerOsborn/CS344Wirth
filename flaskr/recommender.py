@@ -12,8 +12,19 @@ pd.set_option("display.max_colwidth", None)
 data = pd.read_json("../combined.json")
 item_data = pd.DataFrame([i["_source"] for i in data["data"]])
 
-# Ensure all rows of the DataFrame contain the same fields
+
 def homogenize(data):
+    """Ensure all rows of the DataFrame contain the same fields
+
+    Parameters
+    ----------
+    data : DataFrame
+        data of all products
+
+    Returns
+    -------
+        None
+    """
     for i in data:
         bool_series = pd.isnull(data[i])
         data.loc[bool_series, i] = ""
@@ -39,8 +50,19 @@ except KeyError | ValueError:
     print("Null value")
 
 
-# returns a similarity matrix based on similar words among descriptions
 def get_recommender(data):
+    """returns a similarity matrix based on similar words among descriptions
+
+    Parameters
+    ----------
+    data : DataFrame
+        data of all products
+
+    Returns
+    -------
+    ndarray
+        a matrix containing the similarity scores between products
+    """
     # object to remove all non-necessary words from the description
     tfidf = TfidfVectorizer(stop_words="english")
     # matrix of keywords found in description (tfidf now has a list of all descriptor words)
@@ -60,14 +82,43 @@ def get_recommender(data):
 
 cosine_sim = get_recommender(item_data)
 
-# returns results containing the query as a substring of the 'soup'
+
 def search_products(query, data=item_data):
+    """returns results containing the query as a substring of the 'soup'
+
+    Parameters
+    ----------
+    query : str
+        a phrase or word
+    data : DataFrame, optional
+        data to extract product from
+
+    Returns
+    -------
+    DataFrame
+        all products containing the query substring in description
+    """
     results = data[data["soup"].str.find(query.lower()) > 0]
     return results
 
 
-# returns an item based on column value
 def get_item(query, data=item_data, column="catalogItemId"):
+    """returns an item based on column value
+
+    Parameters
+    ----------
+    query : str
+        usually a products catalog id.
+    data : DataFrame, optional
+        data to extract product from
+    column : str, optional
+        field to use for comparison to query.
+
+    Returns
+    -------
+    DataFrame Row
+        a product row in the DataFrame
+    """
     product = data[data[column] == query]
     if not product.empty:
         return product
@@ -82,6 +133,28 @@ def get_recommendations(
     upper_limit=0.95,
     lower_limit=0.10,
 ):
+    """Returns a DataFrame of recommended products
+
+    Parameters
+    ----------
+    index_id : str
+        usually a products catalog id.
+    data : DataFrame, optional
+        data to extract products from
+    return_num : int, optional
+        number of products to return
+    index_name : str, optional
+        field to use for comparison to index_id.
+    upper_limit: int, optional
+        upper limit on product similarity
+    lower_limit: int, optional
+        lower limit on product similarity
+
+    Returns
+    -------
+    DataFrame
+        A DataFrame of recommended products.
+    """
     indices = pd.Series(data.index, index=data[index_name]).drop_duplicates()
 
     idx = indices[index_id]
@@ -122,8 +195,20 @@ tfidf = TfidfVectorizer(stop_words="english")
 tfidf_matrix = tfidf.fit_transform(item_data["soup"])
 
 
-# get the first ten words used to predict similarity of products
 def get_word_similarities(id1, id2):
+    """returns a list of similar words between products
+
+    Parameters
+    ----------
+    id1 : str
+        a products catalog id.
+    id2 : str
+        a products catalog id.
+    Returns
+    -------
+        List
+        A list containing similar words between products.
+    """
     results = []
     item1 = get_item(id1)
     item2 = get_item(id2)
