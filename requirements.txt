@@ -2,5 +2,5 @@ Flask==2.2.5
 pandas==1.3.3
 sklearn==0.0
 sklearn-utils==0.0.15
-nltk==3.6.6
+nltk==3.9
 rake_nltk==1.0.6
